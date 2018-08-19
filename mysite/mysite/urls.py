@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^', include('myblog.urls')),
     url(r'^login/$', login, {'template_name': 'login.html'}, name="login"),
     url(r'^logout/$', logout, {'next_page': '/'}, name="logout"),
+    path('accounts/', include('allauth.urls')),
 ]
